@@ -4,139 +4,315 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .servico-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background: white;
+        }
+        .preco-destaque {
+            font-size: 1.8em;
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+        }
+        .lista-vantagens {
+            list-style: none;
+            padding-left: 0;
+        }
+        .lista-vantagens li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .lista-vantagens li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="index.html"><h1>🐾 PetShop Amigo Fiel</h1></a>
-        <p>Cuidando do seu melhor amigo com amor e dedicação</p>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="acessorios.html">Acessórios</a></li>
-                <li><a href="racoes.html">Rações</a></li>
-                <li><a href="higiene.html">Higiene</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+    <!-- Header Padronizado -->
+    <header class="bg-primary text-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="bi bi-heart-pulse fs-2 me-2"></i>
+                    <div>
+                        <h1 class="h4 mb-0">PetShop Amigo Fiel</h1>
+                        <small class="opacity-75">Cuidando do seu melhor amigo</small>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="bi bi-house me-1"></i>Início
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="acessorios.html">
+                                <i class="bi bi-bag me-1"></i>Acessórios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="servicos.html">
+                                <i class="bi bi-scissors me-1"></i>Serviços
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">
+                                <i class="bi bi-person-plus me-1"></i>Cadastro
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <h2>Nossos Serviços</h2>
-        <p>Serviços profissionais de banho e tosa para deixar seu pet lindo e cheiroso!</p>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1>Nossos Serviços</h1>
+                <p class="lead">Banho, tosa e muito cuidado para seu pet</p>
+                <hr>
+            </div>
+        </div>
 
-        <section>
-            <h3>Serviço de Banho e Tosa</h3>
-            <p>Nossos profissionais são especializados e tratam seu pet com todo carinho e cuidado que ele merece.</p>
-            <p>Utilizamos produtos de alta qualidade, hipoalergênicos e específicos para cada tipo de pelo.</p>
-        </section>
+        <!-- Serviço SEM Tele-Busca -->
+        <div class="servico-card">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Banho e Tosa - SEM Tele-Busca</h3>
+                    <p class="text-muted">Você traz e busca seu pet no petshop</p>
+                    
+                    <h5>O que inclui:</h5>
+                    <ul class="lista-vantagens">
+                        <li>Banho completo com shampoo adequado</li>
+                        <li>Secagem profissional</li>
+                        <li>Tosa higiênica ou completa</li>
+                        <li>Corte de unhas</li>
+                        <li>Limpeza de orelhas</li>
+                        <li>Perfumação leve</li>
+                    </ul>
 
-        <hr>
+                    <div class="mt-4">
+                        <h5>Preços por Porte:</h5>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="border rounded p-3">
+                                    <h6>Pequeno</h6>
+                                    <p class="preco-destaque">R$ 65</p>
+                                    <small>até 10kg</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="border rounded p-3">
+                                    <h6>Médio</h6>
+                                    <p class="preco-destaque">R$ 85</p>
+                                    <small>10kg a 25kg</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="border rounded p-3">
+                                    <h6>Grande</h6>
+                                    <p class="preco-destaque">R$ 110</p>
+                                    <small>acima de 25kg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <section>
-            <h3>Modalidades de Serviço</h3>
+                    <div class="alert alert-info mt-3">
+                        <strong>Tempo:</strong> Aproximadamente 2-3 horas
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                         alt="Banho e tosa" class="img-fluid rounded">
+                </div>
+            </div>
+            
+            <div class="text-center mt-3">
+                <a href="cadastro.html" class="btn btn-primary btn-lg">Agendar Este Serviço</a>
+            </div>
+        </div>
 
-            <article>
-                <h4>Banho e Tosa - SEM Tele-Busca</h4>
-                <img src="https://via.placeholder.com/300x200?text=Banho+e+Tosa" alt="Serviço de banho e tosa">
+        <!-- Serviço COM Tele-Busca -->
+        <div class="servico-card" style="border-color: #28a745;">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Banho e Tosa - COM Tele-Busca</h3>
+                    <p class="text-muted">Buscamos e levamos seu pet em casa</p>
+                    
+                    <h5>Inclui tudo do serviço normal, mais:</h5>
+                    <ul class="lista-vantagens">
+                        <li>Busca no seu endereço</li>
+                        <li>Transporte seguro e adaptado</li>
+                        <li>Realização do serviço</li>
+                        <li>Devolução em casa</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <h5>Preços por Porte:</h5>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="border rounded p-3" style="border-color: #28a745;">
+                                    <h6>Pequeno</h6>
+                                    <p class="preco-destaque">R$ 95</p>
+                                    <small>até 10kg</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="border rounded p-3" style="border-color: #28a745;">
+                                    <h6>Médio</h6>
+                                    <p class="preco-destaque">R$ 120</p>
+                                    <small>10kg a 25kg</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="border rounded p-3" style="border-color: #28a745;">
+                                    <h6>Grande</h6>
+                                    <p class="preco-destaque">R$ 150</p>
+                                    <small>acima de 25kg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info mt-3">
+                        <strong>Tempo:</strong> Aproximadamente 3-4 horas (incluindo transporte)
+                    </div>
+
+                    <div class="alert alert-success mt-2">
+                        <strong>Área:</strong> Atendemos até 10km do petshop
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                         alt="Tele-busca" class="img-fluid rounded">
+                </div>
+            </div>
+            
+            <div class="text-center mt-3">
+                <a href="cadastro.html" class="btn btn-success btn-lg">Agendar com Tele-Busca</a>
+            </div>
+        </div>
+
+        <!-- Informações Importantes -->
+        <div class="card mt-4">
+            <div class="card-header bg-warning">
+                <h5 class="mb-0">Informações Importantes</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>É obrigatória a carteira de vacinação atualizada</li>
+                            <li>Pets agressivos podem ter acréscimo no valor</li>
+                            <li>Pelos muito embaraçados podem precisar de tosa completa</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Recomendamos banho a cada 15 dias</li>
+                            <li>Agendamento com 24h de antecedência para tele-busca</li>
+                            <li>Aceitamos WhatsApp, telefone e agendamento presencial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chamada para Ação -->
+        <div class="text-center mt-4 p-4 bg-light rounded">
+            <h4>Pronto para agendar?</h4>
+            <p>Faça o cadastro e agende o serviço para seu pet</p>
+            <a href="cadastro.html" class="btn btn-primary btn-lg">Fazer Cadastro e Agendar</a>
+        </div>
+    </div>
+
+    <!-- Footer Padronizado -->
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-heart-pulse me-2"></i>PetShop Amigo Fiel
+                    </h5>
+                    <p class="text-light-emphasis">Cuidando do seu melhor amigo com amor e dedicação há mais de 10 anos.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
                 
-                <p><strong>Descrição do Serviço:</strong></p>
-                <p>O serviço inclui:</p>
-                <ul>
-                    <li>Banho completo com shampoo e condicionador adequados</li>
-                    <li>Secagem profissional</li>
-                    <li>Tosa higiênica ou completa (conforme escolha)</li>
-                    <li>Corte de unhas</li>
-                    <li>Limpeza de orelhas</li>
-                    <li>Perfumação</li>
-                </ul>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Contato</h5>
+                    <ul class="list-unstyled text-light-emphasis">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            Rua Herminio R Machado, 290 - Alvorada/RS
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            (51) 3333-4444
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            (51) 99999-8888
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            contato@petshopamigofiel.com.br
+                        </li>
+                    </ul>
+                </div>
                 
-                <p><strong>Valores por Porte:</strong></p>
-                <ul>
-                    <li>Porte Pequeno (até 10kg): R$ 65,00</li>
-                    <li>Porte Médio (10kg a 25kg): R$ 85,00</li>
-                    <li>Porte Grande (acima de 25kg): R$ 110,00</li>
-                </ul>
-                
-                <p><strong>Tempo de Execução:</strong> Aproximadamente 2 a 3 horas, dependendo do porte e comportamento do animal.</p>
-                
-                <p><strong>Observação:</strong> Nesta modalidade, o tutor deve trazer e buscar o pet no petshop.</p>
-            </article>
-
-            <hr>
-
-            <article>
-                <h4>Banho e Tosa - COM Tele-Busca</h4>
-                <img src="https://via.placeholder.com/300x200?text=Tele-Busca" alt="Serviço com tele-busca">
-                
-                <p><strong>Descrição do Serviço:</strong></p>
-                <p>Inclui todos os serviços do banho e tosa tradicional, MAIS:</p>
-                <ul>
-                    <li>Busca do pet no endereço do cliente</li>
-                    <li>Transporte seguro em veículo climatizado e adaptado</li>
-                    <li>Realização do banho e tosa</li>
-                    <li>Devolução do pet no mesmo endereço</li>
-                </ul>
-                
-                <p><strong>Valores por Porte:</strong></p>
-                <ul>
-                    <li>Porte Pequeno (até 10kg): R$ 95,00</li>
-                    <li>Porte Médio (10kg a 25kg): R$ 120,00</li>
-                    <li>Porte Grande (acima de 25kg): R$ 150,00</li>
-                </ul>
-                
-                <p><strong>Tempo de Execução:</strong> Aproximadamente 3 a 4 horas (incluindo transporte).</p>
-                
-                <p><strong>Área de Atendimento:</strong> Atendemos em um raio de até 10km do petshop.</p>
-                
-                <p><strong>Observação:</strong> É necessário agendamento prévio com mínimo de 24 horas de antecedência. O tutor deve estar presente no momento da busca e entrega do pet.</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section>
-            <h3>Informações Importantes</h3>
-            <ul>
-                <li>É obrigatória a apresentação da carteira de vacinação atualizada</li>
-                <li>Pets agressivos podem ter acréscimo no valor do serviço</li>
-                <li>Pelos muito embaraçados podem requerer tosquia completa</li>
-                <li>Recomendamos banho a cada 15 dias para manter a saúde da pele e pelagem</li>
-                <li>Aceitamos agendamento por telefone, WhatsApp ou pessoalmente</li>
-            </ul>
-        </section>
-
-   
-    </main>
-
-    <footer>
-        <hr>
-           <section>
-            <h4>Informações de Contato</h4>
-            <p><strong>Endereço:</strong> Rua Herminio R Machado, 290 - Jardim Algarve, Alvorada - RS, 94859-440</p>
-            <p><strong>Telefone:</strong> (51) 3333-4444</p>
-            <p><strong>WhatsApp:</strong> (51) 99999-8888</p>
-            <p><strong>E-mail:</strong> contato@petshopamigofiel.com.br</p>
-        </section>
-
-        <section>
-            <h4>Links Úteis</h4>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <hr>
-        <p>&copy; 2024 PetShop Amigo Fiel. Todos os direitos reservados.</p>
-        <p>Desenvolvido por: Marcelo - Fundamentos de Sistemas Web</p>
-        <p>CNPJ: 12.345.678/0001-90</p>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light-emphasis text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="acessorios.html" class="text-light-emphasis text-decoration-none">Acessórios</a></li>
+                        <li class="mb-2"><a href="servicos.html" class="text-light-emphasis text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="cadastro.html" class="text-light-emphasis text-decoration-none">Cadastro</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light-emphasis">
+                        &copy; 2024 PetShop Amigo Fiel. Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light-emphasis">
+                        Desenvolvido por: Marcelo - Fundamentos de Sistemas Web
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,146 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acessórios - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .produto {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background: white;
+        }
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .preco {
+            font-size: 1.5em;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .destaque {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>🐾 PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com amor e dedicação</p>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="acessorios.html">Acessórios</a></li>
-                <li><a href="racoes.html">Rações</a></li>
-                <li><a href="higiene.html">Higiene</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+    <!-- Header Padronizado -->
+    <header class="bg-primary text-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="bi bi-heart-pulse fs-2 me-2"></i>
+                    <div>
+                        <h1 class="h4 mb-0">PetShop Amigo Fiel</h1>
+                        <small class="opacity-75">Cuidando do seu melhor amigo</small>
+                    </div>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="bi bi-house me-1"></i>Início
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="acessorios.html">
+                                <i class="bi bi-bag me-1"></i>Acessórios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicos.html">
+                                <i class="bi bi-scissors me-1"></i>Serviços
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">
+                                <i class="bi bi-person-plus me-1"></i>Cadastro
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <h2>Categoria: Acessórios</h2>
-        <p>Tudo o que seu pet precisa para se divertir, brincar e ficar confortável!</p>
+    <div class="container mt-4">
+        <!-- Título Simples -->
+        <div class="row">
+            <div class="col-12">
+                <h1>Acessórios para Pets</h1>
+                <p class="text-muted">Encontre tudo que seu pet precisa para brincar e descansar</p>
+                <hr>
+            </div>
+        </div>
 
-        <section>
-            <article>
-                <h3>Produto 1: Cama Macia Premium</h3>
-                <img src="images/pet_bed.jpg" alt="Cama Macia Premium para pets" width="400" height="300">
+        <!-- Produto 1 -->
+        <div class="row produto">
+            <div class="col-md-4">
+                <img src="images/pet_bed.jpg" alt="Cama para pet" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h3>Cama Macia Premium</h3>
+                <p class="preco">R$ 89,90</p>
                 
-                <h4>Descrição do Produto</h4>
-                <p>Cama super macia e confortável, ideal para cães e gatos de pequeno a médio porte. Feita com material resistente e lavável, proporciona o máximo de conforto para o descanso do seu pet.</p>
-                
-                <h4>Características</h4>
-                <ul>
-                    <li>Material: Tecido macio e resistente</li>
-                    <li>Dimensões: 60cm x 50cm x 15cm</li>
-                    <li>Lavável em máquina</li>
-                    <li>Base antiderrapante</li>
-                    <li>Enchimento de fibra siliconada</li>
-                    <li>Cores disponíveis: azul, rosa e cinza</li>
-                </ul>
-                
-                <h4>Benefícios</h4>
-                <ul>
-                    <li>Proporciona conforto e segurança para o pet</li>
-                    <li>Ajuda a proteger articulações</li>
-                    <li>Fácil higienização</li>
-                    <li>Durabilidade garantida</li>
-                </ul>
-                
-                <p><strong>Valor: R$ 89,90</strong></p>
-                <p><em>Indicado para: Cães e gatos de até 15kg</em></p>
-            </article>
+                <div class="destaque mb-3">
+                    <p><strong>Descrição:</strong> Cama super confortável para cães e gatos de pequeno e médio porte. Material resistente e lavável.</p>
+                </div>
 
-            <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Características:</h6>
+                        <ul>
+                            <li>Tecido macio e resistente</li>
+                            <li>Dimensões: 60x50x15cm</li>
+                            <li>Lavável na máquina</li>
+                            <li>Base antiderrapante</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Benefícios:</h6>
+                        <ul>
+                            <li>Conforto para o pet</li>
+                            <li>Proteção das articulações</li>
+                            <li>Fácil de limpar</li>
+                            <li>Durabilidade</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <article>
-                <h3>Produto 2: Kit Brinquedos Interativos</h3>
-                <img src="images/brinquedos.jpg" alt="Kit de brinquedos interativos">
+                <div class="mt-3">
+                    <button class="btn btn-primary">Comprar</button>
+                    <button class="btn btn-outline-secondary">Adicionar à Lista</button>
+                </div>
+
+                <p class="text-muted mt-2"><small>Indicado para pets de até 15kg</small></p>
+            </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="row produto">
+            <div class="col-md-4">
+                <img src="images/brinquedos.jpg" alt="Brinquedos para pets" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h3>Kit Brinquedos Interativos</h3>
+                <p class="preco">R$ 45,90</p>
                 
-                <h4>Descrição do Produto</h4>
-                <p>Conjunto completo com 5 brinquedos diferentes para estimular a atividade física e mental do seu pet. Ideal para cães de todos os portes que precisam de entretenimento e exercício.</p>
+                <div class="destaque mb-3">
+                    <p><strong>Descrição:</strong> Conjunto com 5 brinquedos para entreter e exercitar seu pet.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Itens do Kit:</h6>
+                        <ul>
+                            <li>Bola com guizo</li>
+                            <li>Mordedor em corda</li>
+                            <li>Osso de borracha</li>
+                            <li>Pelúcia macia</li>
+                            <li>Frisbee</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Vantagens:</h6>
+                        <ul>
+                            <li>Estimula exercício</li>
+                            <li>Desenvolve inteligência</li>
+                            <li>Previne tédio</li>
+                            <li>Fortalece vínculo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <button class="btn btn-primary">Comprar</button>
+                    <button class="btn btn-outline-secondary">Adicionar à Lista</button>
+                </div>
+
+                <p class="text-muted mt-2"><small>Para cães de todos os portes</small></p>
+            </div>
+        </div>
+
+        <!-- Navegação para outras categorias -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Veja também:</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="servicos.html" class="btn btn-outline-primary w-100 mb-2">Serviços</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="cadastro.html" class="btn btn-outline-primary w-100 mb-2">Cadastro</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="index.html" class="btn btn-outline-primary w-100 mb-2">Início</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Observação -->
+        <div class="alert alert-warning mt-4">
+            <strong>Atenção:</strong> Preços sujeitos a alteração. Para dúvidas, entre em contato conosco.
+        </div>
+    </div>
+
+    <!-- Footer Padronizado -->
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-heart-pulse me-2"></i>PetShop Amigo Fiel
+                    </h5>
+                    <p class="text-light-emphasis">Cuidando do seu melhor amigo com amor e dedicação há mais de 10 anos.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
                 
-                <h4>Itens Inclusos no Kit</h4>
-                <ul>
-                    <li><strong>Bola com guizo:</strong> Para estimular a audição e perseguição</li>
-                    <li><strong>Mordedor em corda:</strong> Auxilia na limpeza dental</li>
-                    <li><strong>Osso de borracha:</strong> Resistente para mordidas fortes</li>
-                    <li><strong>Pelúcia macia:</strong> Para momentos de carinho</li>
-                    <li><strong>Frisbee:</strong> Para brincadeiras ao ar livre</li>
-                </ul>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Contato</h5>
+                    <ul class="list-unstyled text-light-emphasis">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            Rua Herminio R Machado, 290 - Alvorada/RS
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            (51) 3333-4444
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            (51) 99999-8888
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            contato@petshopamigofiel.com.br
+                        </li>
+                    </ul>
+                </div>
                 
-                <h4>Características</h4>
-                <ul>
-                    <li>Materiais 100% atóxicos e seguros</li>
-                    <li>Cores vibrantes e atrativas</li>
-                    <li>Resistentes a mordidas</li>
-                    <li>Fáceis de limpar</li>
-                </ul>
-                
-                <h4>Benefícios</h4>
-                <ul>
-                    <li>Estimula atividade física</li>
-                    <li>Desenvolve inteligência e coordenação</li>
-                    <li>Ajuda a prevenir tédio e comportamento destrutivo</li>
-                    <li>Fortalece o vínculo entre tutor e pet</li>
-                    <li>Contribui para saúde dental</li>
-                </ul>
-                
-                <p><strong>Valor: R$ 45,90</strong></p>
-                <p><em>Indicado para: Cães de todos os portes</em></p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section>
-            <h3>Outras Categorias</h3>
-            <p>Conheça também:</p>
-            <ul>
-                <li><a href="racoes.html">Rações - Alimentos de qualidade para seu pet</a></li>
-                <li><a href="higiene.html">Higiene e Limpeza - Produtos para manter a higiene</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <p><strong>Observação:</strong> Todos os preços estão sujeitos a alteração sem aviso prévio.</p>
-            <p>Para mais informações sobre nossos produtos, <a href="contato.html">entre em contato</a> conosco.</p>
-        </section>
-    </main>
-
-    <footer>
-        <hr>
-            <section>
-            <h4>Informações de Contato</h4>
-            <p><strong>Endereço:</strong> Rua Herminio R Machado, 290 - Jardim Algarve, Alvorada - RS, 94859-440</p>
-            <p><strong>Telefone:</strong> (51) 3333-4444</p>
-            <p><strong>WhatsApp:</strong> (51) 99999-8888</p>
-            <p><strong>E-mail:</strong> contato@petshopamigofiel.com.br</p>
-        </section>
-
-        <section>
-            <h4>Links Úteis</h4>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="acessorios.html">Acessórios</a></li>
-                    <li><a href="racoes.html">Rações</a></li>
-                    <li><a href="higiene.html">Higiene</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <hr>
-        <p>&copy; 2024 PetShop Amigo Fiel. Todos os direitos reservados.</p>
-        <p>Desenvolvido por: Marcelo Lopes Tozon - Fundamentos de Sistemas Web</p>
-        <p>CNPJ: 12.345.678/0001-90</p>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light-emphasis text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="acessorios.html" class="text-light-emphasis text-decoration-none">Acessórios</a></li>
+                        <li class="mb-2"><a href="servicos.html" class="text-light-emphasis text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="cadastro.html" class="text-light-emphasis text-decoration-none">Cadastro</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light-emphasis">
+                        &copy; 2024 PetShop Amigo Fiel. Todos os direitos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light-emphasis">
+                        Desenvolvido por: Marcelo - Fundamentos de Sistemas Web
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

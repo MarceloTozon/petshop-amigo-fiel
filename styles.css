@@ -1,0 +1,181 @@
+/* Variáveis CSS */
+:root {
+    --bs-primary-rgb: 102, 126, 234;
+    --bs-success-rgb: 81, 207, 102;
+    --bs-warning-rgb: 255, 212, 59;
+    --bs-info-rgb: 23, 162, 184;
+}
+
+/* Carrossel personalizado */
+.carousel-img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    border-radius: 15px;
+    padding: 2rem;
+    bottom: 20%;
+}
+
+/* Cards com hover */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Cards de produtos */
+.product-card {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2) !important;
+}
+
+.product-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* Navbar personalizada */
+.navbar-brand h1 {
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.navbar-nav .nav-link {
+    border-radius: 20px;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+/* Botões personalizados */
+.btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-lg {
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Ícones */
+.bi {
+    vertical-align: -0.125em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 400px;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .carousel-caption .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .display-6 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-img {
+        height: 300px;
+    }
+    
+    .navbar-brand h1 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Utilitários extras */
+.text-shadow {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--bs-primary), var(--bs-info)) 1;
+}
+
+/* Loading states */
+.btn:disabled {
+    opacity: 0.6;
+    transform: none !important;
+}
+
+/* Focus states para acessibilidade */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Cards de preços */
+.price-card {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, var(--bs-primary), var(--bs-info)) 1;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.7em;
+}
+
+/* Alertas personalizados */
+.alert-petshop {
+    border-left: 4px solid var(--bs-primary);
+    border-radius: 8px;
+}
